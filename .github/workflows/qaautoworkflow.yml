@@ -1,0 +1,32 @@
+name: hillel auto e2e tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, edited, reopened]
+
+
+env: 
+  PLAYWRIGHT_siteAuthUserName: ${{ secrets.SITEAUTHUSERNAME}}
+  PLAYWRIGHT_siteAuthPassword: ${{ secrets.SITEAUTHPASSWORD}}
+  
+jobs:
+  cypress_run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: npm init playwright@latest
+
+    - name: Run Playwright Tests
+      run: npx playwright test 
+
+ 
+
+   
