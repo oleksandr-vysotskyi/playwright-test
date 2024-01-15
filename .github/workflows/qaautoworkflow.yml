@@ -14,7 +14,7 @@ env:
   PLAYWRIGHT_siteAuthPassword: ${{ secrets.SITEAUTHPASSWORD}}
   
 jobs:
-  cypress_run:
+  playwright_run:
     runs-on: ubuntu-latest
 
     steps:
