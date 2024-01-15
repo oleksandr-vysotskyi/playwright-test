@@ -21,9 +21,15 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Install dependencies & browsers
-      run: npx playwright install-deps
+    - name: Install dependencies 
+      run: npm install playwright
 
+    - name: Install browsers
+      run: npx playwright install
+
+    - name: Install additional dependencies
+      run: npx playwright install-deps 
+    
     - name: Run Playwright Tests
       run: npm run playwright:run:all
 
