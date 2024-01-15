@@ -1,15 +1,16 @@
 require('dotenv').config();
 
 export default class Login {
-  constructor(page) {
+  constructor({ page }) {
     this.page = page;
   }
 
   async loginToSite() {
-    const siteAuthUserName = process.env.SITEAUTHUSERNAME;
-    const siteAuthPassword = process.env.SITEAUTHPASSWORD;
-    const loginUrl = `https://${siteAuthUserName}:${siteAuthPassword}@qauto.forstudy.space/`;
-    await this.page.goto(loginUrl);
+    const context = await this.page.context();
+    await context.setHTTPCredentials({
+      username: process.env.SITEAUTHUSERNAME,
+      password: process.env.SITEAUTHPASSWORD
+    });
+    await this.page.goto('/');
   }
-  
 }

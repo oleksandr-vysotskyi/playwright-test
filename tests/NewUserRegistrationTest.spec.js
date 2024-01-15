@@ -5,11 +5,10 @@ import Login from '../pages/Login';
 test.describe('User registration check of QA Auto Hillel site', () => {
   test('User registration check', async ({ page }) => {
     const registrationModal = new RegistrationModal(page);
-    const login = new Login(page);
+    const login = new Login({ page });
 
     await login.loginToSite();
-    await registrationModal.openLoginModal();
-    await registrationModal.openRegistrationModal();
+    await registrationModal.openRegistrationForm();
     await registrationModal.fillOutNameInput();
     await registrationModal.nameInputValueCheck();
     await registrationModal.fillOutLastNameInput();

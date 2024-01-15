@@ -27,7 +27,7 @@ export default class RegistrationModal {
     await this.page.click(this.locators.registrationButton);
   }
 
-  async openModal() {
+  async openRegistrationForm() {
     await this.page.click(this.locators.signUpButton);
   }
 
