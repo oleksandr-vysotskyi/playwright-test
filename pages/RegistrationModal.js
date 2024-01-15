@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-const GenerateUniqueEmail = require('../fixtures/utils').default
+import { test, expect } from '@playwright/test';
+import GenerateUniqueEmail  from '../fixtures/utils';
 const uniqueEmail = GenerateUniqueEmail();
 
 class RegistrationModal {
