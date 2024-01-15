@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-class Login {
+export default class Login {
   constructor(page) {
     this.page = page;
   }
@@ -11,6 +11,5 @@ class Login {
     const loginUrl = `https://${siteAuthUserName}:${siteAuthPassword}@qauto.forstudy.space/`;
     await this.page.goto(loginUrl);
   }
+  
 }
-
-export default Login;

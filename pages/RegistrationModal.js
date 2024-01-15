@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import GenerateUniqueEmail  from '../fixtures/utils';
 const uniqueEmail = GenerateUniqueEmail();
 
-class RegistrationModal {
+export default class RegistrationModal {
   constructor(page) {
     this.page = page;
     this.locators = {
@@ -82,5 +82,3 @@ class RegistrationModal {
   }
 
 }
-
-export default RegistrationModal;
