@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "playwright:run:chromium": "npx playwright test --project=chromium",
-    "playwright:run:firefox": "npx playwright test --project=firefox",
-    "playwright:run:webkit": "npx playwright test --project=webkit",
-    "playwright:run:all": "npx playwright test"
+    "playwright:chromium": "npx playwright test --project=chromium",
+    "playwright:firefox": "npx playwright test --project=firefox",
+    "playwright:webkit": "npx playwright test --project=webkit",
+    "playwright:all": "npx playwright test",
+    "playwright:ui": "npx playwright test --ui",
+    "playwright:debug": "npx playwright test --debug"
   },
   "keywords": [],
   "author": "",
