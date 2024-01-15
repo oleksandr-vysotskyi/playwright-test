@@ -6,7 +6,8 @@
   "scripts": {
     "playwright:run:chromium": "npx playwright test --project=chromium",
     "playwright:run:firefox": "npx playwright test --project=firefox",
-    "playwright:run:webkit": "npx playwright test --project=webkit"
+    "playwright:run:webkit": "npx playwright test --project=webkit",
+    "playwright:run:all": "npx playwright test"
   },
   "keywords": [],
   "author": "",

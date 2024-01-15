@@ -28,7 +28,7 @@ jobs:
       run: npx playwright install
     
     - name: Run Playwright Tests
-      run: npm run playwright:run:chromium
+      run: npm run playwright:run:all
 
  
 
