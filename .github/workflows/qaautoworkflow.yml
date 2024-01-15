@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Install dependencies
-      run: npm init playwright@latest
+      run: npm install playwright
 
     - name: Run Playwright Tests
       run: npx playwright test 
