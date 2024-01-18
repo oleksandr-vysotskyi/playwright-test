@@ -72,9 +72,9 @@ export default class GaragePage {
   }
 
   async fillOutMileageExpenseInput() {
-    await this.page.click(this.locators.mileageExpenseInput);
+    await this.page.waitForTimeout(3000);
     await this.page.fill(this.locators.mileageExpenseInput, '1600');
-  }
+}
  
 
   async mileageExpenseValueCheck() {

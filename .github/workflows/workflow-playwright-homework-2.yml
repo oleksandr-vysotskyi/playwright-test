@@ -10,8 +10,10 @@ on:
 
 
 env: 
-    SITEAUTHUSERNAME: ${{ secrets.SITEAUTHUSERNAME }}
-    SITEAUTHPASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
+    SITE_AUTH_USER_NAME: ${{ secrets.SITEAUTHUSERNAME }}
+    SITE_AUTH_PASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
+    USER_EMAIL: ${{ secrets.USEREMAIL }}
+    USER_PASSWORD: ${{ secrets.USERPASSWORD }}
   
 jobs:
   playwright_run:
@@ -30,8 +32,14 @@ jobs:
     - name: Install additional dependencies
       run: npx playwright install-deps 
     
-    - name: Run Playwright Tests
-      run: npm run test:all
+    - name: Run Playwright Tests on Chromium
+      run: npm run test:chromium:fast
+
+    - name: Run Playwright Tests on Firefox
+      run: npm run test:firefox:fast
+
+    - name: Run Playwright Tests on Webkit
+      run: npm run test:webkit:fast
 
     - name: Upload report
       if: always()
