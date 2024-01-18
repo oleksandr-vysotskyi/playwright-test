@@ -10,8 +10,8 @@ on:
 
 
 env: 
-    SITEAUTHUSERNAME: ${{ secrets.SITEAUTHUSERNAME }}
-    SITEAUTHPASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
+    SITE_AUTH_USERNAME: ${{ secrets.SITEAUTHUSERNAME }}
+    SITE_AUTH_PASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
   
 jobs:
   playwright_run:
@@ -31,7 +31,7 @@ jobs:
       run: npx playwright install-deps 
     
     - name: Run Playwright Tests
-      run: npm run playwright:all
+      run: npm run test:all
 
     - name: Upload report
       if: always()
