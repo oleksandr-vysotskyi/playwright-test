@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import RegistrationModal from '../pages/RegistrationModal';
-import Login from '../pages/Login';
+import Login from '../pages/Login.spec.js';
 
 test.describe('User registration check of QA Auto Hillel site', () => {
   test('User registration check', async ({ page }) => {
@@ -23,4 +23,3 @@ test.describe('User registration check of QA Auto Hillel site', () => {
     await registrationModal.userProfileIconVisibilityCheck();
   });
 });
-

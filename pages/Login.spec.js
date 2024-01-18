@@ -13,4 +13,8 @@ export default class Login {
     });
     await this.page.goto('/');
   }
+  
+  async openProfileTab() {
+    await this.page.goto('/panel/profile');
+  }
 }

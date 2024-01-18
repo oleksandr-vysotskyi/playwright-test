@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "playwright:chromium": "npx playwright test --project=chromium",
-    "playwright:firefox": "npx playwright test --project=firefox",
-    "playwright:webkit": "npx playwright test --project=webkit",
-    "playwright:all": "npx playwright test",
-    "playwright:ui": "npx playwright test --ui",
-    "playwright:debug": "npx playwright test --debug"
+    "test:chromium:debug": "npx playwright test --debug --project=chromium",
+    "test:firefox:debug": "npx playwright test --debug --project=firefox",
+    "test:webkit:debug": "npx playwright test --debug --project=webkit",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:all": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "fast:debug:firefox": "npx playwright test --debug --project=firefox --grep @fast",
+    "fast:debug:webkit": "npx playwright test --debug --project=webkit --grep @fast",
+    "fast:debug:chromium": "npx playwright test --debug --project=chromium --grep @fast",
+    "test:chromium:fast": "npx playwright test --project=chromium --grep @fast"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +27,7 @@
     "eslint-plugin-playwright": "^0.21.0"
   },
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "playwright": "^1.40.1"
   }
 }
