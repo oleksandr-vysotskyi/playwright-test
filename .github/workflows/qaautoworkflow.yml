@@ -31,7 +31,7 @@ jobs:
       run: npx playwright install-deps 
     
     - name: Run Playwright Tests
-      run: npm run playwright:all
+      run: npm run test:all
 
     - name: Upload report
       if: always()
