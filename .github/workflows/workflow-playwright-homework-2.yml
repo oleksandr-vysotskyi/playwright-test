@@ -1,4 +1,4 @@
-name: hillel auto e2e tests
+name: hillel auto e2e tests homework 2
 
 on:
   workflow_dispatch:
