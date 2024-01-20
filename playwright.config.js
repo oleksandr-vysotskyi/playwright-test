@@ -45,7 +45,7 @@ export default defineConfig({
     {
       name: 'setup',
       testMatch: /global-setup\.js/,
-      testIgnore: ['**/*NewUserRegistrationTest.spec.ss']
+      testIgnore: ['**/*NewUserRegistrationTest.spec.js']
     },
     {
       name: 'chromium',
