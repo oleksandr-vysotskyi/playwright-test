@@ -1,0 +1,53 @@
+name: hillel auto e2e tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, edited, reopened]
+
+
+env: 
+    SITE_AUTH_USER_NAME: ${{ secrets.SITEAUTHUSERNAME }}
+    SITE_AUTH_PASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
+    USER_EMAIL: ${{ secrets.USEREMAIL }}
+    USER_PASSWORD: ${{ secrets.USERPASSWORD }}
+  
+jobs:
+  playwright_run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies 
+      run: npm install playwright
+
+    - name: Install browsers
+      run: npx playwright install
+
+    - name: Install additional dependencies
+      run: npx playwright install-deps 
+    
+    - name: Run Playwright Tests on Chromium
+      run: npm run test:chromium:fast
+
+    - name: Run Playwright Tests on Firefox
+      run: npm run test:firefox:fast
+
+    - name: Run Playwright Tests on Webkit
+      run: npm run test:webkit:fast
+
+    - name: Upload report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-report
+        path: playwright-report/
+
+ 
+
+   
