@@ -1,4 +1,4 @@
-//
+//@ts-check
 import { defineConfig, devices } from '@playwright/test';
 import path from 'path';
 export const STORAGE_STATE = path.join(__dirname, 'states/.auth/user.json')
@@ -29,7 +29,9 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://qauto.forstudy.space',
     httpCredentials: {
-      username: process.env.SITE_AUTH_USER_NAME,
+      // @ts-ignore
+      username: process.env.SITE_AUTH_USER_NxwAME,
+      // @ts-ignore
       password: process.env.SITE_AUTH_PASSWORD
     },
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
