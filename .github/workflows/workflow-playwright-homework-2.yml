@@ -10,10 +10,11 @@ on:
 
 
 env: 
-    SITE_AUTH_USER_NAME: ${{ secrets.SITEAUTHUSERNAME }}
-    SITE_AUTH_PASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
     USER_EMAIL: ${{ secrets.USEREMAIL }}
     USER_PASSWORD: ${{ secrets.USERPASSWORD }}
+    SITE_AUTH_USER_NAME: ${{ secrets.SITEAUTHUSERNAME }}
+    SITE_AUTH_PASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
+   
   
 jobs:
   playwright_run:
