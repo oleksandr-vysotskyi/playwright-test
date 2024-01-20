@@ -29,9 +29,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://qauto.forstudy.space',
     httpCredentials: {
-      // @ts-ignore
-      username: process.env.SITE_AUTH_USERNAME,
-      // @ts-ignore
+      username: process.env.SITE_AUTH_USER_NAME,
       password: process.env.SITE_AUTH_PASSWORD
     },
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
