@@ -10,10 +10,10 @@ on:
 
 
 env: 
-    USER_EMAIL: ${{ secrets.USEREMAIL }}
-    USER_PASSWORD: ${{ secrets.USERPASSWORD }}
-    SITE_AUTH_USER_NAME: ${{ secrets.SITEAUTHUSERNAME }}
-    SITE_AUTH_PASSWORD: ${{ secrets.SITEAUTHPASSWORD }}
+    USER_EMAIL: ${{ secrets.USER_EMAIL }}
+    USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+    SITE_AUTH_USER_NAME: ${{ secrets.SITE_AUTH_USERNAME }}
+    SITE_AUTH_PASSWORD: ${{ secrets.SITE_AUTH_PASSWORD }}
    
   
 jobs:
