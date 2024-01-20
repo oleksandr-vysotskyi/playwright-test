@@ -30,7 +30,7 @@ export default defineConfig({
     baseURL: 'https://qauto.forstudy.space',
     httpCredentials: {
       // @ts-ignore
-      username: process.env.SITE_AUTH_USER_NxwAME,
+      username: process.env.SITE_AUTH_USER_NAME,
       // @ts-ignore
       password: process.env.SITE_AUTH_PASSWORD
     },
