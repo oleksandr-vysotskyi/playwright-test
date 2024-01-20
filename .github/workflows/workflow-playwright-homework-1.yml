@@ -30,8 +30,8 @@ jobs:
     - name: Install additional dependencies
       run: npx playwright install-deps 
     
-    - name: Run Playwright Tests
-      run: npm run test:slow
+    - name: Run Playwright Tests on Firefox
+      run: npm run test:firefox:slow
 
     - name: Upload report
       if: always()

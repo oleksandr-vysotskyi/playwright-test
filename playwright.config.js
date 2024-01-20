@@ -59,9 +59,9 @@ export default defineConfig({
       name: 'firefox',
       use: {
         ...devices['Desktop Firefox'],
-        storageState: STORAGE_STATE
+        //storageState: STORAGE_STATE
       },
-      dependencies: ['setup']
+      //dependencies: ['setup']
     },
     {
       name: 'webkit',
