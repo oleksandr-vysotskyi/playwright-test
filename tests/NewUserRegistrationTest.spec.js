@@ -3,7 +3,7 @@ import RegistrationModal from '../pages/RegistrationModal';
 import Login from '../pages/Login.spec.js';
 
 test.describe('User registration check of QA Auto Hillel site', () => {
-  test('User registration check', async ({ page }) => {
+  test('User registration check @slow', async ({ page }) => {
     const registrationModal = new RegistrationModal(page);
     const login = new Login({ page });
 

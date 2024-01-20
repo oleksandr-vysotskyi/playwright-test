@@ -19,7 +19,11 @@
     "test:fast": "npx playwright test --grep @fast",
     "test:chromium:fast": "npx playwright test --project=chromium --grep @fast",
     "test:firefox:fast": "npx playwright test --project=firefox --grep @fast",
-    "test:webkit:fast": "npx playwright test --project=webkit --grep @fast"
+    "test:webkit:fast": "npx playwright test --project=webkit --grep @fast",
+    "test:slow": "npx playwright test --grep @slow",
+    "test:chromium:slow": "npx playwright test --project=chromium --grep @slow",
+    "test:firefox:slow": "npx playwright test --project=firefox --grep @slow",
+    "test:webkit:slow": "npx playwright test --project=webkit --grep @slow"
   },
   "keywords": [],
   "author": "",

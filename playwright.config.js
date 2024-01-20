@@ -44,7 +44,8 @@ export default defineConfig({
   projects: [
     {
       name: 'setup',
-      testMatch: /global-setup\.js/
+      testMatch: /global-setup\.js/,
+      testIgnore: ['**/*NewUserRegistrationTest.spec.ss']
     },
     {
       name: 'chromium',
