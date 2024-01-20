@@ -35,8 +35,8 @@ export default defineConfig({
       password: process.env.SITE_AUTH_PASSWORD
     },
     otherCredenditals: {
-      useremail: process.env.USER_EMAIL,
-      userpassword: process.env.USER_PASSWORD
+      email: process.env.USER_EMAIL,
+      password: process.env.USER_PASSWORD
     },
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
