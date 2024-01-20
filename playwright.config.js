@@ -1,4 +1,4 @@
-// @ts-check
+//
 import { defineConfig, devices } from '@playwright/test';
 import path from 'path';
 export const STORAGE_STATE = path.join(__dirname, 'states/.auth/user.json')
