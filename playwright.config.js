@@ -34,6 +34,10 @@ export default defineConfig({
       // @ts-ignore
       password: process.env.SITE_AUTH_PASSWORD
     },
+    data: {
+      "email": process.env.USER_EMAIL,
+      "password": process.env.USER_PASSWORD
+    },
     otherCredenditals: {
       email: process.env.USER_EMAIL,
       password: process.env.USER_PASSWORD
