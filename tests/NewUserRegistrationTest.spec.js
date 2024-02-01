@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import RegistrationModal from '../pages/RegistrationModal';
+import RegistrationModal from '../pages/RegistrationModal.spec.js';
 import Login from '../pages/Login.spec.js';
 
 test.describe('User registration check of QA Auto Hillel site', () => {
